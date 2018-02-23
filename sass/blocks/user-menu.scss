@@ -1,0 +1,8 @@
+.user-menu {
+  @include list-reset;
+}
+
+.user-menu__link {
+  color: black;
+  text-decoration: none;
+}

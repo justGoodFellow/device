@@ -21,3 +21,11 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+@mixin list-reset {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

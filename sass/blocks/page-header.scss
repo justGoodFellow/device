@@ -1,3 +1,23 @@
 .page-header__wrapper {
   @include container;
+
+  background-color: $color-main;
+}
+
+.page-header__inner {
+  padding: 0 60px;
+}
+
+.page-header__row {
+  display: flex;
+}
+
+.page-header__col {
+  &--left {
+    width: 540px;
+  }
+
+  &--right {
+    width: 500px;
+  }
 }

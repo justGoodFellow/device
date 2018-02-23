@@ -1,0 +1,22 @@
+.main-nav__list {
+  @include list-reset;
+}
+
+.main-nav__link {
+  font-weight: 900;
+  font-family: $font-second;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-nav__list--lvl2 {
+  flex-direction: column;
+  width: 240px;
+
+  .main-nav__link {
+    font-weight: 300;
+    font-family: $font-main;
+    text-transform: none;
+  }
+}
