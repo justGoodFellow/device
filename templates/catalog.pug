@@ -1,0 +1,323 @@
+extend ./layouts/base.pug
+
+block content
+  header.page-header
+    .page-header__wrapper
+      a.page-header__logo.logo(href='index.html')
+        | Device
+      .page-header__col
+        .page-header__row.page-header__row--left
+          form.search
+            input.search__field(type='search', placeholder='Поиск по сайту')
+            button.search__submit(type='submit')
+              | Найти
+        .page-header__row.page-header__row--right
+          ul.user-menu
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--login(href='#')
+                | Валентин Петухов
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--login(href='#')
+                | Выйти
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--compare(href='#')
+                | Сравнить
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--cart(href='#')
+                | Корзина
+      .page-header__col
+        nav.main-nav
+          .page-header__row.page-header__row--left
+            ul.main-nav__list
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Каталог товаров
+                ul
+                  li
+                    ul
+                      li
+                        a(href='#')
+                          | Виртуальная реальность
+                      li
+                        a(href='#')
+                          | Моноподы для селфи
+                      li
+                        a(href='#')
+                          | Экшн-камеры
+                  li
+                    ul
+                      li
+                        a(href='#')
+                          | Фитнес-браслеты
+                      li
+                        a(href='#')
+                          | Умные часы
+                  li
+                    ul
+                      li
+                        a(href='#')
+                          | Квадрокоптеры
+          .page-header__row.page-header__row--right
+            ul.main-nav__list
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Доставка
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Гарантия
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Контакты
+  section.catalog
+    .catalog__header
+      .catalog__header-wrap
+        nav.page-nav
+          ul.page-nav__list
+            li.page-nav__item
+              a.page-nav__link(href='index.html')
+                | Главная
+            li.page-nav__item
+              a.page-nav__link(href='#')
+                | Каталог товаров
+            li.page-nav__item
+              a.page-nav__link
+                | Моноподы для селфи
+        h1.catalog__title
+          | Моноподы для селфи
+    .catalog__main
+      .catalog__left-side
+        .catalog__filters
+          .catalog__filter-type-wrap
+            .catalog__left-col
+              h4.catalog__filter-type
+                | Фильтр:
+          form.catalog__form
+            .catalog__left-col
+              fieldset.catalog__filters-group
+                legend
+                  h3.catalog__filters-title
+                    | Стоимость
+                .catalog__filters-cost.range-filter
+                  .range-filter__range-controls
+                    .range-filter__scale
+                      .range-filter__bar(style='width: 70%;')
+                      .range-filter__toggle.range-filter__min-toggle
+                      .range-filter__toggle.range-filter__max-toggle
+                  .range-filter__price-controls
+                    .range-filter__min-price
+                      label(for='from')
+                        | От
+                      input(id='from', type='text', value='0')
+                    .range-filter__max-price
+                      label(for='to')
+                        | До
+                      input(id='to', type='text', value='5000')
+              fieldset.catalog__filters-group
+                legend
+                  h3.catalog__filters-title
+                    | Цвет
+                div
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='black', checked)
+                    label.checkbox__label(for='black')
+                      | Черный
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='white')
+                    label.checkbox__label(for='white')
+                      | Белый
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='blue', checked)
+                    label.checkbox__label(for='blue')
+                      | Синий
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='red', checked)
+                    label.checkbox__label(for='red')
+                      | Красный
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='pink')
+                    label.checkbox__label(for='pink')
+                      | Розовый
+              fieldset.catalog__filters-group
+                legend
+                  h3.catalog__filters-title
+                    | Bluetooth
+                div
+                  .radiobox
+                    input.radiobox__input(type='radio', id='bluetooth-yes', name='bluetooth', checked)
+                    label.radiobox__label(for='bluetooth-yes')
+                      span
+                        | Есть
+                  .radiobox
+                    input.radiobox__input(type='radio', id='bluetooth-no', name='bluetooth')
+                    label.radiobox__label(for='bluetooth-no')
+                      span
+                        | Нет
+              button.catalog__filters-btn.btn(type='submit')
+                | Показать
+      .catalog__right-side
+        .catalog__sort
+          .catalog__right-col
+            .catalog__filter-type-wrap
+              h4.catalog__filter-type
+                | Сортировка:
+              ul.catalog__sort-items
+                li.catalog__sort-item
+                  button.catalog__sort-btn(type='button', disabled)
+                    | По цене
+                li.catalog__sort-item
+                  button.catalog__sort-btn(type='button')
+                    | По типу
+                li.catalog__sort-item
+                  button.catalog__sort-btn(type='button')
+                    | По популярности
+                li.catalog__sort-item
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--up(type='button', disabled)
+                    span
+                      | Обратный порядок
+                li.catalog__sort-item.catalog__sort-item--active
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(type='button')
+                    span
+                      | Прямой порядок
+        .catalog__content
+          .catalog__right-col
+            .catalog__items
+              .catalog__item.product
+                .product__container
+                  .product__img-wrap
+                    img(src='img/product-1.jpg', width='360', height='380', alt='')
+                  .product__actions
+                    a.product__buy.btn(href='#')
+                      | В корзину
+                    a.product__compare(href='#')
+                      | Добавить к сравнению
+                .product__info
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Любительская селфи-палка
+                  span.product__price
+                    | 500 руб.
+              .catalog__item.product
+                .product__container
+                  .product__img-wrap
+                    img(src='img/product-2.jpg', width='360', height='380', alt='')
+                  .product__actions
+                    a.product__buy.btn(href='#')
+                      | В корзину
+                    a.product__compare(href='#')
+                      | Добавить к сравнению
+                .product__info
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Профессиональная селфи-палка
+                  span.product__price
+                    | 1500 руб.
+              .catalog__item.product
+                .product__container
+                  .product__img-wrap
+                    img(src='img/product-3.jpg', width='360', height='380', alt='')
+                  .product__actions
+                    a.product__buy.btn(href='#')
+                      | В корзину
+                    a.product__compare(href='#')
+                      | Добавить к сравнению
+                .product__info
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Непотопляемая селфи-палка
+                  span.product__price
+                    | 2500 руб.
+              .catalog__item.product
+                .product__container
+                  span.product__flag.flag.flag--new
+                    | New
+                  .product__img-wrap
+                    img(src='img/product-4.jpg', width='360', height='380', alt='')
+                  .product__actions
+                    a.product__buy.btn(href='#')
+                      | В корзину
+                    a.product__compare(href='#')
+                      | Добавить к сравнению
+                .product__info
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Селфи-палка «Следуй за мной»
+                  span.product__price
+                    | 4900 руб.
+            .catalog__nav
+              button.catalog__nav-prev.btn(type='button')
+                | Назад
+              ul.catalog__nav-items
+                li.catalog__nav-item
+                  button.catalog__nav-btn.btn(type='button', disabled)
+                    | 1
+                li.catalog__nav-item
+                  button.catalog__nav-btn.btn(type='button')
+                    | 2
+                li.catalog__nav-item
+                  button.catalog__nav-btn.btn(type='button')
+                    | 3
+              button.catalog__nav-next.btn(type='button')
+                | Вперед
+  footer.page-footer
+    .page-footer__wrapper
+      .page-footer__row
+        .page-footer__col-left
+          a.logo(href='index.html')
+            | Device
+        .page-footer__col-right
+          ul.user-menu
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--login(href='#')
+                | Выйти
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--compare(href='#')
+                | Сравнить
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--cart(href='#')
+                | Корзина
+      .page-footer__row
+        .page-footer__col-left
+          address
+            span.page-footer__address
+              | г. Москва, ул. Строителей, 15
+        .page-footer__col-center
+          nav.main-nav
+            ul.main-nav__list
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Доставка
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Гарантия
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Контакты
+        .page-footer__col-center
+          address
+            span.page-footer__phone
+              | Тел.:
+              |
+              a.page-footer__phone-link(href='tel:+74954959595')
+                | +7 (495) 495-95-95
+      .page-footer__row
+        .page-footer__col-left
+        .page-footer__col-center
+          ul.social-links
+            li.social-links__item
+              a.social-links__link.social-links__link--fb(href='#', target='_blank')
+                span
+                  | Мы в Фейсбуке
+            li.social-links__item
+              a.social-links__link.social-links__link--in(href='#', target='_blank')
+                span
+                  |  Мы в Инстаграмме
+            li.social-links__item
+              a.social-links__link.social-links__link--tw(href='#', target='_blank')
+                span
+                  | Мы в Твиттере
+        .page-footer__col-right
+          a.page-footer__credit(href='https://htmlacademy.ru/intensive/htmlcss', target='_blank')
+            span
+              | Разработано — htmlacademy.ru
+            svg(width='27', height='35')
+              use(xlink:href='img/symbols.svg#logo-html')
