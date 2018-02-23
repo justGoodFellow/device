@@ -1,5 +1,6 @@
 {
   "name": "device",
+  "description": "Учебный проект - Девайс",
   "main": "templates/index.pug",
   "repository": "git@github.com:justGoodFellow/device.git",
   "author": "Sergey Bodnaryuk <bodnaryuk_s.a@hotmail.com>",

@@ -1,5 +1,327 @@
 extend ./layouts/base.pug
 
 block content
-  h1
-    | Content
+  header.page-header
+    .page-header__wrapper
+      a.page-header__logo.logo
+        | Device
+      .page-header__col
+        .page-header__row.page-header__row--left
+          form.search
+            input.search__field(type='search', placeholder='Поиск по сайту')
+            button.search__submit(type='submit')
+              | Найти
+        .page-header__row.page-header__row--right
+          ul.user-menu
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--login(href='#')
+                | Войти
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--compare(href='#')
+                | Сравнить
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--cart(href='#')
+                | Корзина
+      .page-header__col
+        nav.main-nav
+          .page-header__row.page-header__row--left
+            ul.main-nav__list
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Каталог товаров
+                ul
+                  li
+                    ul
+                      li
+                        a(href='#')
+                          | Виртуальная реальность
+                      li
+                        a(href='#')
+                          | Моноподы для селфи
+                      li
+                        a(href='#')
+                          | Экшн-камеры
+                  li
+                    ul
+                      li
+                        a(href='#')
+                          | Фитнес-браслеты
+                      li
+                        a(href='#')
+                          | Умные часы
+                  li
+                    ul
+                      li
+                        a(href='#')
+                          | Квадрокоптеры
+          .page-header__row.page-header__row--right
+            ul.main-nav__list
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Доставка
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Гарантия
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Контакты
+  main
+    .promo
+      .promo__wrapper
+        .promo__slider.slider-promo
+          .slider-promo__item
+            .slider-promo__img-container
+              img(src='img/promo-slider-1.png', width='384', height='486', alt='')
+            .slider-promo__content
+              h2.slider-promo__title
+                | Делай селфи, как Бен Стиллер!
+              p.slider-promo__description
+                | Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+              a.slider-promo__link.btn(href='#')
+                | Подробнее
+              table.slider-promo__table
+                tr
+                  td
+                    | 8,5 м
+                  td
+                    | 5 кг
+                  td
+                    | Карбон
+                tr
+                  th
+                    | Длина палки
+                  th
+                    | Вес палки
+                  th
+                    | Материал
+              span.slider-promo__slide-number
+                | 01
+          .slider-promo__item
+            .slider-promo__img-container
+              img(src='img/promo-slider-2.png', width='345', height='485', alt='')
+            .slider-promo__content
+              h2.slider-promo__title
+                | Худеем правильно!
+              p.slider-promo__description
+                | Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+              a.slider-promo__link.btn(href='#')
+                | Подробнее
+              table.slider-promo__table
+                tr
+                  td
+                    | 48 часов
+                tr
+                  th
+                    | Без подзарядки
+              span.slider-promo__slide-number
+                | 02
+          .slider-promo__item
+            .slider-promo__img-container
+              img(src='img/promo-slider-3.png', width='526', height='334', alt='')
+            .slider-promo__content
+              h2.slider-promo__title
+                | Порхает как бабочка, жалит как пчела!
+              p.slider-promo__description
+                | Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+              a.slider-promo__link.btn(href='#')
+                | Подробнее
+              table.slider-promo__table
+                tr
+                  td
+                    | 800 м
+                  td
+                    | 50 м
+                tr
+                  th
+                    | Дальность полета
+                  th
+                    | Радиус поражения
+              span.slider-promo__slide-number
+                | 03
+        .slider__controls
+          button.slider-promo__controls-item(type='button', disabled)
+            span
+              | 1
+          button.slider-promo__controls-item(type='button')
+            span
+              | 2
+          button.slider-promo__controls-item(type='button')
+            span
+              | 3
+    section.popular
+      .popular__wrapper
+        ul.popular__items
+          li.popular__item
+            a.popular__link(href='#')
+              | Виртуальная реальность
+          li.popular__item
+            a.popular__link(href='#')
+              | Моноподы для селфи
+          li.popular__item
+            a.popular__link(href='#')
+              | Экшн-камеры
+          li.popular__item
+            a.popular__link(href='#')
+              | Фитнес-браслеты
+          li.popular__item
+            a.popular__link(href='#')
+              | Умные часы
+          li.popular__item
+            a.popular__link(href='#')
+              | Квадрокоптеры
+    section.services
+      .services__wrapper
+        .services__slider
+          .services__controls
+            button.services__control-btn(type='button', disabled)
+              | Доставка
+            button.services__control-btn(type='button')
+              | Гарантия
+            button.services__control-btn(type='button')
+              | Кредит
+          .services__slides
+            .services__slide.services__slide--active
+              h3.services__slide-title
+                | Доставка
+              p.services__slide-description
+                | Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            .services__slide
+              h3.services__slide-title
+                | Гарантия
+              p.services__slide-description
+                | Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+            .services__slide
+              h3.services__slide-title
+                | Кредит
+              p.services__slide-description
+                | Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
+    section.brands
+      .brands__wrapper
+        .brand__items
+          a.brand__item(href='#')
+            img(src='img/logo-brand-1.png', width='260', height='100', alt='')
+          a.brand__item(href='#')
+            img(src='img/logo-brand-2.png', width='260', height='100', alt='')
+          a.brand__item(href='#')
+            img(src='img/logo-brand-3.png', width='260', height='100', alt='')
+          a.brand__item(href='#')
+            img(src='img/logo-brand-4.png', width='260', height='100', alt='')
+    .info
+      .info__wrapper
+        section.info__company
+          h2.info__title
+            | О нас
+          p.info__description.info__company-desc
+            | Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+          p.info__description.info__company-desc
+            | Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+          ul.info__items
+            li.info__item
+              | Деловые Линии
+            li.info__item
+              | Автотрейдинг
+            li.info__item
+              | ЖелДорЭкспедиция
+          a.info__company-more.btn(href='#')
+            | Подробнее о компании
+        section.info__contacts
+          h2.info__title
+            | Контакты
+          p.info__description
+            | Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+          a.info__contacts-map(href='#')
+            img(src='img/map.jpg', width='560', height='222', alt='г. Москва, ул. Строителей, д. 15')
+          a.info__feedback-open.btn.btn--fluid(href='#')
+            | Заблудились? Напишите нам!
+      .info__modal-map.map
+        .map__container
+          img(src='img/map--big.jpg', width='960', height='559', alt='г. Москва, ул. Строителей, д. 15')
+        button.map__close.modal__close(type='button')
+          span
+            | Закрыть
+      .info__modal-feedback.feedback.modal
+        form.feedback__form(action='#')
+          .feedback__items.modal__inner
+            .feedback__item-group
+              .feedback__item
+                label.feedback__label(for='name')
+                  | Ваше имя:
+                input.feedback__field(id='name', name='name' placeholder='Представьтесь, пожалуйста')
+              .feedback__item
+                label.feedback__label(for='email')
+                  | Ваш e-mail:
+                input.feedback__field(id='email', type='email', name='email', placeholder='Для отправки ответа')
+            .feedback__item
+              label.feedback__label(for='text')
+                | Текст письма:
+              textarea.feedback__field(id='text', name='text', placeholder='В свободной форме')
+          .feedback__footer.modal__footer
+            button.feedback__send.btn.btn--fluid(type='submit')
+              | Отправить
+        button.feedback__close.modal__close(type='button')
+          span
+            | Закрыть
+      .modal__overlay
+  footer.page-footer
+    .page-footer__wrapper
+      .page-footer__row
+        .page-footer__col-left
+          a.logo
+            | Device
+        .page-footer__col-right
+          ul.user-menu
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--login(href='#')
+                | Войти
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--compare(href='#')
+                | Сравнить
+            li.user-menu__item
+              a.user-menu__link.user-menu__link--cart(href='#')
+                | Корзина
+      .page-footer__row
+        .page-footer__col-left
+          address
+            span.page-footer__address
+              | г. Москва, ул. Строителей, 15
+        .page-footer__col-center
+          nav.main-nav
+            ul.main-nav__list
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Доставка
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Гарантия
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Контакты
+        .page-footer__col-center
+          address
+            span.page-footer__phone
+              | Тел.:
+              |
+              a.page-footer__phone-link(href='tel:+74954959595')
+                | +7 (495) 495-95-95
+      .page-footer__row
+        .page-footer__col-left
+        .page-footer__col-center
+          ul.social-links
+            li.social-links__item
+              a.social-links__link.social-links__link--fb(href='#', target='_blank')
+                span
+                  | Мы в Фейсбуке
+            li.social-links__item
+              a.social-links__link.social-links__link--in(href='#', target='_blank')
+                span
+                  |  Мы в Инстаграмме
+            li.social-links__item
+              a.social-links__link.social-links__link--tw(href='#', target='_blank')
+                span
+                  | Мы в Твиттере
+        .page-footer__col-right
+          a.page-footer__credit(href='https://htmlacademy.ru/intensive/htmlcss', target='_blank')
+            span
+              | Разработано — htmlacademy.ru
+            svg(width='27', height='35')
+              use(xlink:href='img/symbols.svg#logo-html')
