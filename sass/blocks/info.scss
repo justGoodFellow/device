@@ -1,3 +1,60 @@
 .info__wrapper {
   @include container;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__company,
+.info__contacts {
+  width: 560px;
+}
+
+.info__title {
+  font-weight: 800;
+  font-size: 47px;
+  font-family: $font-second;
+}
+
+.info__description {
+  line-height: 30px;
+  color: $gray--darken;
+}
+
+.info__items {
+  @include list-reset;
+
+  flex-direction: column;
+}
+
+.info__item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  font-weight: 800;
+  font-size: 16px;
+  font-family: $font-second;
+
+  &::before {
+    content: '';
+
+    width: 4px;
+    height: 4px;
+    margin-right: 25px;
+
+    border: 2px solid $gray--light;
+    border-radius: 50%;
+  }
+}
+
+.info__contacts-map {
+  display: block;
+  margin: 40px 0;
+
+  img {
+    display: block;
+    width: 560px;
+    height: 222px;
+  }
 }

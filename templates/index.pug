@@ -7,13 +7,22 @@ block content
         a.page-header__logo.logo
           | Device
         .page-header__row
-          .page-header__row.page-header__col--left
+          .page-header__col.page-header__col--left
             form.search
               input.search__field(type='search', placeholder='Поиск по сайту')
               button.search__submit(type='submit')
                 | Найти
-          .page-header__row.page-header__col--right
-            ul.user-menu
+          .page-header__col.page-header__col--right
+            ul.page-header__user-menu.user-menu
+              //- li.user-menu__item.user-menu__item--login
+              //-   a.user-menu__link(href='#')
+              //-     | Войти
+              //- li.user-menu__item.user-menu__item--compare
+              //-   a.user-menu__link(href='#')
+              //-     | Сравнить
+              //- li.user-menu__item.user-menu__item--cart
+              //-   a.user-menu__link(href='#')
+              //-     | Корзина
               li.user-menu__item
                 a.user-menu__link.user-menu__link--login(href='#')
                   | Войти
@@ -23,7 +32,7 @@ block content
               li.user-menu__item
                 a.user-menu__link.user-menu__link--cart(href='#')
                   | Корзина
-        nav.main-nav
+        nav.page-header__main-nav.main-nav
           .page-header__row
             .page-header__col.page-header__col--left
               ul.main-nav__list
@@ -152,49 +161,52 @@ block content
       .popular__wrapper
         ul.popular__items
           li.popular__item
-            a.popular__link(href='#')
+            a.popular__link.popular__link--vr(href='#')
               | Виртуальная реальность
           li.popular__item
-            a.popular__link(href='#')
+            a.popular__link.popular__link--monopods(href='#')
               | Моноподы для селфи
           li.popular__item
-            a.popular__link(href='#')
+            a.popular__link.popular__link--action-cameras(href='#')
               | Экшн-камеры
           li.popular__item
-            a.popular__link(href='#')
+            a.popular__link.popular__link--fitness-bracelets(href='#')
               | Фитнес-браслеты
           li.popular__item
-            a.popular__link(href='#')
+            a.popular__link.popular__link--smart-watch(href='#')
               | Умные часы
           li.popular__item
-            a.popular__link(href='#')
+            a.popular__link.popular__link--quadrocopters(href='#')
               | Квадрокоптеры
     section.services
       .services__wrapper
         .services__slider
           .services__controls
-            button.services__control-btn(type='button', disabled)
+            button.services__control-btn.btn(type='button', disabled)
               | Доставка
-            button.services__control-btn(type='button')
+            button.services__control-btn.btn(type='button')
               | Гарантия
-            button.services__control-btn(type='button')
+            button.services__control-btn.btn(type='button')
               | Кредит
           .services__slides
-            .services__slide.services__slide--active
-              h3.services__slide-title
-                | Доставка
-              p.services__slide-description
-                | Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-            .services__slide
-              h3.services__slide-title
-                | Гарантия
-              p.services__slide-description
-                | Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-            .services__slide
-              h3.services__slide-title
-                | Кредит
-              p.services__slide-description
-                | Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
+            .services__slide.services__slide--delivery.services__slide--active
+              .services__slide-inner
+                h3.services__slide-title
+                  | Доставка
+                p.services__slide-description
+                  | Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            .services__slide.services__slide--warranty
+              .services__slide-inner
+                h3.services__slide-title
+                  | Гарантия
+                p.services__slide-description
+                  | Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+            .services__slide.services__slide--credit
+              .services__slide-inner
+                h3.services__slide-title
+                  | Кредит
+                p.services__slide-description
+                  | Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
     section.brands
       .brands__wrapper
         .brand__items
@@ -223,7 +235,7 @@ block content
             li.info__item
               | ЖелДорЭкспедиция
           a.info__company-more.btn(href='#')
-            | Подробнее о компании
+            | Подробнее о нас
         section.info__contacts
           h2.info__title
             | Контакты
@@ -232,7 +244,7 @@ block content
           a.info__contacts-map(href='#')
             img(src='img/map.jpg', width='560', height='222', alt='г. Москва, ул. Строителей, д. 15')
           a.info__feedback-open.btn.btn--fluid(href='#')
-            | Заблудились? Напишите нам!
+            | Напишите нам
       .info__modal-map.map
         .map__container
           img(src='img/map--big.jpg', width='960', height='559', alt='г. Москва, ул. Строителей, д. 15')
@@ -241,7 +253,7 @@ block content
             | Закрыть
       .info__modal-feedback.feedback.modal
         form.feedback__form(action='#')
-          .feedback__items.modal__inner
+          .feedback__items
             .feedback__item-group
               .feedback__item
                 label.feedback__label(for='name')
@@ -255,8 +267,7 @@ block content
               label.feedback__label(for='text')
                 | Текст письма:
               textarea.feedback__field(id='text', name='text', placeholder='В свободной форме')
-          .feedback__footer.modal__footer
-            button.feedback__send.btn.btn--fluid(type='submit')
+            button.feedback__send.btn(type='submit')
               | Отправить
         button.feedback__close.modal__close(type='button')
           span
@@ -269,7 +280,7 @@ block content
           a.logo
             | Device
         .page-footer__col-right
-          ul.user-menu
+          ul.page-footer__user-menu.user-menu
             li.user-menu__item
               a.user-menu__link.user-menu__link--login(href='#')
                 | Войти
@@ -285,7 +296,7 @@ block content
             span.page-footer__address
               | г. Москва, ул. Строителей, 15
         .page-footer__col-center
-          nav.main-nav
+          nav.page-footer__main-nav.main-nav
             ul.main-nav__list
               li.main-nav__item
                 a.main-nav__link(href='#')
@@ -296,7 +307,7 @@ block content
               li.main-nav__item
                 a.main-nav__link(href='#')
                   | Контакты
-        .page-footer__col-center
+        .page-footer__col-right
           address
             span.page-footer__phone
               | Тел.:

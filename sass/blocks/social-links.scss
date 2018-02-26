@@ -1,0 +1,29 @@
+.social-links {
+  @include list-reset;
+}
+
+.social-links__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--fb {
+    background-image: url('../img/fb.svg');
+  }
+
+  &--in {
+    background-image: url('../img/instagram.svg');
+  }
+
+  &--tw {
+    background-image: url('../img/twitter.svg');
+  }
+
+  span {
+    @include visually-hidden;
+  }
+}

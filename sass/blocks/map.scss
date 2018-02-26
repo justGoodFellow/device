@@ -1,0 +1,15 @@
+.map {
+  position: relative;
+  left: 50%;
+
+  width: 960px;
+  margin-left: -480px;
+}
+
+.map__container {
+  img {
+    display: block;
+    width: 960px;
+    height: 559px;
+  }
+}

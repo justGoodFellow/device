@@ -1,15 +1,23 @@
 .page-header__wrapper {
   @include container;
+}
+
+.page-header__inner {
+  margin-top: 40px;
+  padding: 0 60px;
+  padding-bottom: 25px;
 
   background-color: $color-main;
 }
 
-.page-header__inner {
-  padding: 0 60px;
+.page-header__logo {
+  position: relative;
+  top: -24px;
 }
 
 .page-header__row {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .page-header__col {
@@ -19,5 +27,42 @@
 
   &--right {
     width: 500px;
+  }
+}
+
+.page-header__user-menu {
+  .user-menu__item {
+    margin-left: 40px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-last-child(2) {
+      margin-left: auto;
+    }
+  }
+}
+
+.page-header__main-nav {
+  .main-nav__item {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .main-nav__link {
+    margin-bottom: 30px;
+  }
+
+  .main-nav__list--lvl2 {
+    visibility: hidden;
+
+    .main-nav__link {
+      margin-bottom: 15px;
+    }
   }
 }

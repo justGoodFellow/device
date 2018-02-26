@@ -1,3 +1,78 @@
 .popular__wrapper {
   @include container;
 }
+
+.popular__items {
+  @include list-reset;
+
+  flex-wrap: wrap;
+}
+
+.popular__item {
+  margin-right: 40px;
+  margin-bottom: 40px;
+
+  &:nth-child(6n) {
+    margin-right: 0;
+  }
+}
+
+.popular__link {
+  display: block;
+  width: 160px;
+
+  font-weight: 800;
+  font-size: 18px;
+  font-family: $font-second;
+  color: black;
+  text-decoration: none;
+
+  &::before {
+    content: '';
+
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 35px;
+
+    background-color: $color-main;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--vr {
+    &::before {
+      background-image: url('../img/popular-1.svg');
+    }
+  }
+
+  &--monopods {
+    &::before {
+      background-image: url('../img/popular-2.svg');
+    }
+  }
+
+  &--action-cameras {
+    &::before {
+      background-image: url('../img/popular-3.svg');
+    }
+  }
+
+  &--fitness-bracelets {
+    &::before {
+      background-image: url('../img/popular-4.svg');
+    }
+  }
+
+  &--smart-watch {
+    &::before {
+      background-image: url('../img/popular-5.svg');
+    }
+  }
+
+  &--quadrocopters {
+    &::before {
+      background-image: url('../img/popular-6.svg');
+    }
+  }
+}

@@ -3,6 +3,39 @@
 }
 
 .user-menu__link {
-  color: black;
+  display: flex;
+  align-items: center;
+
+  color: inherit;
   text-decoration: none;
+
+  &::before {
+    content: '';
+
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--login {
+    &::before {
+      background-image: url('../img/user.svg');
+    }
+  }
+
+  &--compare {
+    &::before {
+      background-image: url('../img/compare.svg');
+    }
+  }
+
+  &--cart {
+    &::before {
+      background-image: url('../img/cart.svg');
+    }
+  }
 }

@@ -1,3 +1,93 @@
+.promo {
+  position: relative;
+  top: -110px;
+}
+
 .promo__wrapper {
   @include container;
+}
+
+.slider-promo__item {
+  position: relative;
+
+  display: flex;
+  min-height: 500px;
+}
+
+.slider-promo__img-container {
+  display: flex;
+  width: 580px;
+
+  img {
+    margin: auto;
+  }
+}
+
+.slider-promo__content {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 580px;
+  margin-right: 60px;
+  margin-left: 20px;
+  padding-top: 60px;
+}
+
+.slider-promo__title {
+  position: relative;
+  z-index: 1;
+
+  margin: 20px 0;
+
+  font-weight: 800;
+  font-size: 47px;
+  font-family: $font-second;
+}
+
+.slider-promo__description {
+  line-height: 30px;
+  color: $gray--darken;
+}
+
+.slider-promo__link {
+  margin: 50px 0;
+}
+
+.slider-promo__table {
+  border-collapse: collapse;
+  text-align: left;
+
+  td,
+  th {
+    width: 160px;
+    padding: 0;
+
+    &:nth-child(2) {
+      width: 140px;
+    }
+  }
+
+  td {
+    font-size: 36px;
+    font-family: $font-second;
+  }
+
+  th {
+    font-weight: inherit;
+    font-size: 13px;
+  }
+}
+
+.slider-promo__slide-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: 0;
+
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 179px;
+  font-family: $font-second;
+  // color: white;
 }
