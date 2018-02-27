@@ -16,6 +16,24 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2em;
+
+  &--catalog {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-left: 15px;
+
+      background-image: url('../img/plus.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .main-nav__list--lvl2 {

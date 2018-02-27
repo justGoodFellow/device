@@ -11,9 +11,24 @@
 }
 
 .info__title {
+  position: relative;
+
+  padding-top: 50px;
+
   font-weight: 800;
   font-size: 47px;
   font-family: $font-second;
+
+  &::before {
+    @include line;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: black;
+  }
 }
 
 .info__description {
@@ -48,6 +63,10 @@
   }
 }
 
+.info__company-more {
+  margin-top: 100px;
+}
+
 .info__contacts-map {
   display: block;
   margin: 40px 0;
@@ -56,5 +75,7 @@
     display: block;
     width: 560px;
     height: 222px;
+
+    background-color: $gray--lightest;
   }
 }

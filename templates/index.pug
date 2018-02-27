@@ -14,15 +14,6 @@ block content
                 | Найти
           .page-header__col.page-header__col--right
             ul.page-header__user-menu.user-menu
-              //- li.user-menu__item.user-menu__item--login
-              //-   a.user-menu__link(href='#')
-              //-     | Войти
-              //- li.user-menu__item.user-menu__item--compare
-              //-   a.user-menu__link(href='#')
-              //-     | Сравнить
-              //- li.user-menu__item.user-menu__item--cart
-              //-   a.user-menu__link(href='#')
-              //-     | Корзина
               li.user-menu__item
                 a.user-menu__link.user-menu__link--login(href='#')
                   | Войти
@@ -37,7 +28,7 @@ block content
             .page-header__col.page-header__col--left
               ul.main-nav__list
                 li.main-nav__item
-                  a.main-nav__link(href='#')
+                  a.main-nav__link.main-nav__link--catalog(href='#')
                     | Каталог товаров
                   ul.main-nav__list
                     li
@@ -78,7 +69,7 @@ block content
     .promo
       .promo__wrapper
         .promo__slider.slider-promo
-          .slider-promo__item
+          .slider-promo__item.slider-promo__item--active
             .slider-promo__img-container
               img(src='img/promo-slider-1.png', width='384', height='486', alt='')
             .slider-promo__content
@@ -147,16 +138,16 @@ block content
                     | Радиус поражения
               span.slider-promo__slide-number
                 | 03
-        .slider__controls
-          button.slider-promo__controls-item(type='button', disabled)
-            span
-              | 1
-          button.slider-promo__controls-item(type='button')
-            span
-              | 2
-          button.slider-promo__controls-item(type='button')
-            span
-              | 3
+          .slider__controls
+            button.slider-promo__controls-item(type='button', disabled)
+              span
+                | 1
+            button.slider-promo__controls-item(type='button')
+              span
+                | 2
+            button.slider-promo__controls-item(type='button')
+              span
+                | 3
     section.popular
       .popular__wrapper
         ul.popular__items
@@ -316,6 +307,7 @@ block content
                 | +7 (495) 495-95-95
       .page-footer__row
         .page-footer__col-left
+          span.page-footer__line
         .page-footer__col-center
           ul.social-links
             li.social-links__item

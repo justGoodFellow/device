@@ -10,7 +10,7 @@
   // margin-top: -215px;
   padding: 100px;
 
-  border: 1px solid #000000;
+  box-shadow: 0 10px 20px rgba(black, 0.2), 0 20px 40px rgba(black, 0.75);
 
   &--show {
     display: block;
@@ -74,11 +74,12 @@
   }
 
   &:hover {
-    border-color: #b4b9bb;
+    // border-color: #b4b9bb;
   }
 
   &:focus {
-    border-color: black;
+    background-color: white;
+    border-color: $color-main--dark;
     outline: none;
   }
 

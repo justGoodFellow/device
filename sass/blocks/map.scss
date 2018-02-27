@@ -4,6 +4,8 @@
 
   width: 960px;
   margin-left: -480px;
+
+  box-shadow: 0 10px 20px rgba(black, 0.2);
 }
 
 .map__container {
@@ -11,5 +13,7 @@
     display: block;
     width: 960px;
     height: 559px;
+
+    background-color: $gray--lightest;
   }
 }
