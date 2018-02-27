@@ -1,0 +1,176 @@
+.catalog__main {
+  display: flex;
+}
+
+.catalog__header-wrap {
+  @include container;
+}
+
+.catalog__left-side {
+  width: 38%;
+}
+
+.catalog__right-side {
+  width: 62%;
+}
+
+.catalog__left-col {
+  box-sizing: border-box;
+  width: 348px;
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+.catalog__right-col {
+  box-sizing: border-box;
+  width: 852px;
+  margin-right: auto;
+  padding-right: 20px;
+}
+
+.catalog__filters {
+  height: 100%;
+}
+
+.catalog__filter-type-wrap {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 70px;
+  padding: 10px 20px;
+  padding-right: 10px;
+
+  &--left {
+    background-color: $gray;
+  }
+}
+
+.catalog__filter-type {
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 13px;
+  font-family: $font-second;
+  text-transform: uppercase;
+}
+
+.catalog__sort {
+  background-color: $gray--lighten;
+}
+
+.catalog__form {
+  height: 100%;
+
+  background-color: $gray--lightest;
+}
+
+.catalog__filters-group {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  padding-bottom: 5px;
+
+  border: none;
+  border-bottom: 1px solid $gray;
+
+  &:last-of-type {
+    border: none;
+  }
+}
+
+.catalog__filters-title {
+  margin: 0;
+  padding: 17px 0;
+
+  font-size: 17px;
+  font-family: $font-second;
+  text-transform: uppercase;
+}
+
+.catalog__filters-btn {
+  min-width: 140px;
+  margin-top: 55px;
+}
+
+.catalog__sort-items {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog__sort-btn {
+  margin: 0 35px;
+  padding: 0;
+
+  font: inherit;
+  font-size: 13px;
+  font-family: $font-second;
+  color: rgba(black, 0.3);
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: black;
+
+    outline: none;
+  }
+
+  span {
+    @include visually-hidden;
+  }
+
+  &:disabled {
+    cursor: auto;
+    opacity: 1;
+  }
+
+  &--arrow {
+    width: 0;
+    height: 0;
+    margin: 0 10px;
+    padding: 0;
+
+    border-width: 9px 4.5px 0 4.5px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: black;
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:disabled {
+      border-top-color: black;
+    }
+  }
+
+  &--up {
+    transform: rotate(180deg);
+  }
+}
+
+.catalog__items {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 70px;
+  padding-left: 70px;
+}
+
+.catalog__item {
+  margin-right: 40px;
+  margin-bottom: 40px;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}

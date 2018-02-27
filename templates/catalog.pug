@@ -3,71 +3,68 @@ extend ./layouts/base.pug
 block content
   header.page-header
     .page-header__wrapper
-      a.page-header__logo.logo(href='index.html')
-        | Device
-      .page-header__col
-        .page-header__row.page-header__row--left
-          form.search
-            input.search__field(type='search', placeholder='Поиск по сайту')
-            button.search__submit(type='submit')
-              | Найти
-        .page-header__row.page-header__row--right
-          ul.user-menu
-            li.user-menu__item
-              a.user-menu__link.user-menu__link--login(href='#')
-                | Валентин Петухов
-            li.user-menu__item
-              a.user-menu__link.user-menu__link--login(href='#')
-                | Выйти
-            li.user-menu__item
-              a.user-menu__link.user-menu__link--compare(href='#')
-                | Сравнить
-            li.user-menu__item
-              a.user-menu__link.user-menu__link--cart(href='#')
-                | Корзина
-      .page-header__col
-        nav.main-nav
-          .page-header__row.page-header__row--left
-            ul.main-nav__list
-              li.main-nav__item
-                a.main-nav__link(href='#')
-                  | Каталог товаров
-                ul
-                  li
-                    ul
+      .page-header__inner
+        a.page-header__logo.logo(href='index.html')
+          | Device
+        .page-header__row
+          .page-header__col.page-header__col--left
+            form.search
+              input.search__field(type='search', placeholder='Поиск по сайту')
+              button.search__submit(type='submit')
+                | Найти
+          .page-header__col.page-header__col--right
+            ul.page-header__user-menu.user-menu
+              li.user-menu__item
+                a.user-menu__link.user-menu__link--login(href='#')
+                  | Войти
+              li.user-menu__item
+                a.user-menu__link.user-menu__link--compare(href='#')
+                  | Сравнить
+              li.user-menu__item
+                a.user-menu__link.user-menu__link--cart(href='#')
+                  | Корзина
+        nav.page-header__main-nav.main-nav
+          .page-header__row
+            .page-header__col.page-header__col--left
+              ul.main-nav__list
+                li.main-nav__item
+                  a.main-nav__link.main-nav__link--catalog(href='#')
+                    | Каталог товаров
+                  ul.main-nav__list
+                    li
+                      ul.main-nav__list.main-nav__list--lvl2
+                        li
+                          a.main-nav__link(href='#')
+                            | Виртуальная реальность
+                        li
+                          a.main-nav__link(href='catalog.html')
+                            | Моноподы для селфи
+                        li
+                          a.main-nav__link(href='#')
+                            | Экшн-камеры
+                    li
+                      ul.main-nav__list.main-nav__list--lvl2
+                        li
+                          a.main-nav__link(href='#')
+                            | Фитнес-браслеты
+                        li
+                          a.main-nav__link(href='#')
+                            | Умные часы
+                    ul.main-nav__list.main-nav__list--lvl2
                       li
-                        a(href='#')
-                          | Виртуальная реальность
-                      li
-                        a(href='#')
-                          | Моноподы для селфи
-                      li
-                        a(href='#')
-                          | Экшн-камеры
-                  li
-                    ul
-                      li
-                        a(href='#')
-                          | Фитнес-браслеты
-                      li
-                        a(href='#')
-                          | Умные часы
-                  li
-                    ul
-                      li
-                        a(href='#')
+                        a.main-nav__link(href='#')
                           | Квадрокоптеры
-          .page-header__row.page-header__row--right
-            ul.main-nav__list
-              li.main-nav__item
-                a.main-nav__link(href='#')
-                  | Доставка
-              li.main-nav__item
-                a.main-nav__link(href='#')
-                  | Гарантия
-              li.main-nav__item
-                a.main-nav__link(href='#')
-                  | Контакты
+            .page-header__col.page-header__col--right
+              ul.main-nav__list
+                li.main-nav__item
+                  a.main-nav__link(href='#')
+                    | Доставка
+                li.main-nav__item
+                  a.main-nav__link(href='#')
+                    | Гарантия
+                li.main-nav__item
+                  a.main-nav__link(href='#')
+                    | Контакты
   section.catalog
     .catalog__header
       .catalog__header-wrap
@@ -87,7 +84,7 @@ block content
     .catalog__main
       .catalog__left-side
         .catalog__filters
-          .catalog__filter-type-wrap
+          .catalog__filter-type-wrap.catalog__filter-type-wrap--left
             .catalog__left-col
               h4.catalog__filter-type
                 | Фильтр:
@@ -262,13 +259,13 @@ block content
     .page-footer__wrapper
       .page-footer__row
         .page-footer__col-left
-          a.logo(href='index.html')
+          a.page-footer__logo.logo(href='index.html')
             | Device
         .page-footer__col-right
-          ul.user-menu
+          ul.page-footer__user-menu.user-menu
             li.user-menu__item
               a.user-menu__link.user-menu__link--login(href='#')
-                | Выйти
+                | Войти
             li.user-menu__item
               a.user-menu__link.user-menu__link--compare(href='#')
                 | Сравнить
@@ -281,7 +278,7 @@ block content
             span.page-footer__address
               | г. Москва, ул. Строителей, 15
         .page-footer__col-center
-          nav.main-nav
+          nav.page-footer__main-nav.main-nav
             ul.main-nav__list
               li.main-nav__item
                 a.main-nav__link(href='#')
@@ -292,7 +289,7 @@ block content
               li.main-nav__item
                 a.main-nav__link(href='#')
                   | Контакты
-        .page-footer__col-center
+        .page-footer__col-right
           address
             span.page-footer__phone
               | Тел.:
@@ -301,6 +298,7 @@ block content
                 | +7 (495) 495-95-95
       .page-footer__row
         .page-footer__col-left
+          span.page-footer__line
         .page-footer__col-center
           ul.social-links
             li.social-links__item
