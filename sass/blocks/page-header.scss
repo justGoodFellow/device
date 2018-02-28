@@ -102,6 +102,18 @@
     &:nth-last-child(2) {
       margin-left: auto;
     }
+
+    &--logout {
+      margin-left: 20px;
+
+      .user-menu__link {
+        opacity: 0.3;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 }
 

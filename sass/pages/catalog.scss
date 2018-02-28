@@ -6,19 +6,30 @@
   @include container;
 }
 
+.catalog__header-inner {
+  padding: 0 60px;
+}
+
+.catalog__title {
+  font-weight: 800;
+  font-size: 47px;
+  font-family: $font-second;
+}
+
 .catalog__left-side {
-  width: 38%;
+  flex-grow: 1;
 }
 
 .catalog__right-side {
-  width: 62%;
+  flex-grow: 1;
 }
 
 .catalog__left-col {
   box-sizing: border-box;
   width: 348px;
   margin-left: auto;
-  padding-left: 20px;
+  padding-right: 70px;
+  padding-left: 80px;
 }
 
 .catalog__right-col {
@@ -26,9 +37,12 @@
   width: 852px;
   margin-right: auto;
   padding-right: 20px;
+  padding-left: 70px;
 }
 
 .catalog__filters {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
@@ -37,8 +51,6 @@
   align-items: center;
   box-sizing: border-box;
   min-height: 70px;
-  padding: 10px 20px;
-  padding-right: 10px;
 
   &--left {
     background-color: $gray;
@@ -48,18 +60,16 @@
 .catalog__filter-type {
   margin: 0;
 
-  font-weight: normal;
-  font-size: 13px;
+  font-weight: 800;
+  font-size: 16px;
   font-family: $font-second;
   text-transform: uppercase;
-}
-
-.catalog__sort {
-  background-color: $gray--lighten;
+  letter-spacing: 0.2em;
 }
 
 .catalog__form {
-  height: 100%;
+  flex-grow: 1;
+  padding-top: 70px;
 
   background-color: $gray--lightest;
 }
@@ -71,11 +81,10 @@
   padding-bottom: 5px;
 
   border: none;
-  border-bottom: 1px solid $gray;
+}
 
-  &:last-of-type {
-    border: none;
-  }
+.catalog__form legend {
+  width: 100%;
 }
 
 .catalog__filters-title {
@@ -84,12 +93,17 @@
 
   font-size: 17px;
   font-family: $font-second;
-  text-transform: uppercase;
+
+  border-top: 2px solid black;
 }
 
 .catalog__filters-btn {
   min-width: 140px;
   margin-top: 55px;
+}
+
+.catalog__sort {
+  background-color: $gray--lighten;
 }
 
 .catalog__sort-items {
@@ -107,10 +121,9 @@
   padding: 0;
 
   font: inherit;
-  font-size: 13px;
-  font-family: $font-second;
+  font-weight: 400;
+  font-size: 14px;
   color: rgba(black, 0.3);
-  text-transform: uppercase;
 
   background-color: transparent;
   border: none;
@@ -159,11 +172,13 @@
   }
 }
 
+.catalog__content {
+  padding: 70px 0;
+}
+
 .catalog__items {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 70px;
-  padding-left: 70px;
 }
 
 .catalog__item {

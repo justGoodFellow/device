@@ -1,0 +1,29 @@
+.catalog-nav {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $gray--lightest;
+}
+
+.catalog-nav__items {
+  @include list-reset;
+}
+
+.catalog-nav__btn {
+  padding: 25px 15px;
+
+  font-weight: 800;
+  font-size: 16px;
+  font-family: $font-second;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: $gray--lightest;
+  border: none;
+}
+
+.catalog-nav__prev,
+.catalog-nav__next {
+  padding-right: 30px;
+  padding-left: 30px;
+}

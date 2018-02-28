@@ -16,7 +16,10 @@ block content
             ul.page-header__user-menu.user-menu
               li.user-menu__item
                 a.user-menu__link.user-menu__link--login(href='#')
-                  | Войти
+                  | Валентин Петухов
+              li.user-menu__item.user-menu__item--logout
+                a.user-menu__link(href='#')
+                  | Выйти
               li.user-menu__item
                 a.user-menu__link.user-menu__link--compare(href='#')
                   | Сравнить
@@ -68,19 +71,20 @@ block content
   section.catalog
     .catalog__header
       .catalog__header-wrap
-        nav.page-nav
-          ul.page-nav__list
-            li.page-nav__item
-              a.page-nav__link(href='index.html')
-                | Главная
-            li.page-nav__item
-              a.page-nav__link(href='#')
-                | Каталог товаров
-            li.page-nav__item
-              a.page-nav__link
-                | Моноподы для селфи
-        h1.catalog__title
-          | Моноподы для селфи
+        .catalog__header-inner
+          h1.catalog__title
+            | Моноподы для селфи
+          nav.page-nav
+            ul.page-nav__list
+              li.page-nav__item
+                a.page-nav__link(href='index.html')
+                  | Главная
+              li.page-nav__item
+                a.page-nav__link(href='#')
+                  | Каталог товаров
+              li.page-nav__item
+                a.page-nav__link
+                  | Моноподы для селфи
     .catalog__main
       .catalog__left-side
         .catalog__filters
@@ -168,93 +172,95 @@ block content
                   button.catalog__sort-btn(type='button')
                     | По популярности
                 li.catalog__sort-item
-                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--up(type='button', disabled)
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--up(type='button')
                     span
                       | Обратный порядок
                 li.catalog__sort-item.catalog__sort-item--active
-                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(type='button')
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(type='button', disabled)
                     span
                       | Прямой порядок
-        .catalog__content
+        .catalog__content-wrap
           .catalog__right-col
-            .catalog__items
-              .catalog__item.product
-                .product__container
-                  .product__img-wrap
-                    img(src='img/product-1.jpg', width='360', height='380', alt='')
-                  .product__actions
-                    a.product__buy.btn(href='#')
-                      | В корзину
-                    a.product__compare(href='#')
-                      | Добавить к сравнению
-                .product__info
-                  h3.product__title
-                    a.product__link(href='#')
-                      | Любительская селфи-палка
-                  span.product__price
-                    | 500 руб.
-              .catalog__item.product
-                .product__container
-                  .product__img-wrap
-                    img(src='img/product-2.jpg', width='360', height='380', alt='')
-                  .product__actions
-                    a.product__buy.btn(href='#')
-                      | В корзину
-                    a.product__compare(href='#')
-                      | Добавить к сравнению
-                .product__info
-                  h3.product__title
-                    a.product__link(href='#')
-                      | Профессиональная селфи-палка
-                  span.product__price
-                    | 1500 руб.
-              .catalog__item.product
-                .product__container
-                  .product__img-wrap
-                    img(src='img/product-3.jpg', width='360', height='380', alt='')
-                  .product__actions
-                    a.product__buy.btn(href='#')
-                      | В корзину
-                    a.product__compare(href='#')
-                      | Добавить к сравнению
-                .product__info
-                  h3.product__title
-                    a.product__link(href='#')
-                      | Непотопляемая селфи-палка
-                  span.product__price
-                    | 2500 руб.
-              .catalog__item.product
-                .product__container
-                  span.product__flag.flag.flag--new
-                    | New
-                  .product__img-wrap
-                    img(src='img/product-4.jpg', width='360', height='380', alt='')
-                  .product__actions
-                    a.product__buy.btn(href='#')
-                      | В корзину
-                    a.product__compare(href='#')
-                      | Добавить к сравнению
-                .product__info
-                  h3.product__title
-                    a.product__link(href='#')
-                      | Селфи-палка «Следуй за мной»
-                  span.product__price
-                    | 4900 руб.
-            .catalog__nav
-              button.catalog__nav-prev.btn(type='button')
-                | Назад
-              ul.catalog__nav-items
-                li.catalog__nav-item
-                  button.catalog__nav-btn.btn(type='button', disabled)
-                    | 1
-                li.catalog__nav-item
-                  button.catalog__nav-btn.btn(type='button')
-                    | 2
-                li.catalog__nav-item
-                  button.catalog__nav-btn.btn(type='button')
-                    | 3
-              button.catalog__nav-next.btn(type='button')
-                | Вперед
+            .catalog__content
+              .catalog__items
+                .catalog__item.product
+                  .product__container
+                    .product__img-wrap
+                      img(src='img/product-1.jpg', width='360', height='380', alt='')
+                    .product__actions
+                      a.product__buy.btn(href='#')
+                        | В корзину
+                      a.product__compare(href='#')
+                        | Добавить к сравнению
+                  .product__info
+                    h3.product__title
+                      a.product__link(href='#')
+                        | Любительская селфи-палка
+                    span.product__price
+                      | 500 руб.
+                .catalog__item.product
+                  .product__container
+                    .product__img-wrap
+                      img(src='img/product-2.jpg', width='360', height='380', alt='')
+                    .product__actions
+                      a.product__buy.btn(href='#')
+                        | В корзину
+                      a.product__compare(href='#')
+                        | Добавить к сравнению
+                  .product__info
+                    h3.product__title
+                      a.product__link(href='#')
+                        | Профессиональная селфи-палка
+                    span.product__price
+                      | 1500 руб.
+                .catalog__item.product
+                  .product__container
+                    .product__img-wrap
+                      img(src='img/product-3.jpg', width='360', height='380', alt='')
+                    .product__actions
+                      a.product__buy.btn(href='#')
+                        | В корзину
+                      a.product__compare(href='#')
+                        | Добавить к сравнению
+                  .product__info
+                    h3.product__title
+                      a.product__link(href='#')
+                        | Непотопляемая селфи-палка
+                    span.product__price
+                      | 2500 руб.
+                .catalog__item.product
+                  .product__container
+                    .product__flag.product__flag--new
+                      span
+                        | New
+                    .product__img-wrap
+                      img(src='img/product-4.jpg', width='360', height='380', alt='')
+                    .product__actions
+                      a.product__buy.btn(href='#')
+                        | В корзину
+                      a.product__compare(href='#')
+                        | Добавить к сравнению
+                  .product__info
+                    h3.product__title
+                      a.product__link(href='#')
+                        | Селфи-палка «Следуй за мной»
+                    span.product__price
+                      | 4900 руб.
+              .catalog__nav.catalog-nav
+                button.catalog-nav__prev.catalog-nav__btn(type='button')
+                  | Назад
+                ul.catalog-nav__items
+                  li.catalog-nav__item
+                    button.catalog-nav__btn(type='button', disabled)
+                      | 1
+                  li.catalog-nav__item
+                    button.catalog-nav__btn(type='button')
+                      | 2
+                  li.catalog-nav__item
+                    button.catalog-nav__btn(type='button')
+                      | 3
+                button.catalog-nav__next.catalog-nav__btn(type='button')
+                  | Вперед
   footer.page-footer
     .page-footer__wrapper
       .page-footer__row
@@ -265,7 +271,7 @@ block content
           ul.page-footer__user-menu.user-menu
             li.user-menu__item
               a.user-menu__link.user-menu__link--login(href='#')
-                | Войти
+                | Выйти
             li.user-menu__item
               a.user-menu__link.user-menu__link--compare(href='#')
                 | Сравнить
