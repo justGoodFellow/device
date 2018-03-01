@@ -40,6 +40,19 @@
     background-position: center;
   }
 
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::before {
+      background-color: $color-main--dark;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &--vr {
     &::before {
       background-image: url('../img/popular-1.svg');

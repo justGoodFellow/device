@@ -70,11 +70,12 @@
   appearance: none;
 
   &::placeholder {
-    color: rgba(#777777, 0.5);
+    color: rgba($gray--darken, 0.4);
   }
 
   &:hover {
-    // border-color: #b4b9bb;
+    background-color: $gray--lighten;
+    border-color: $gray--lighten;
   }
 
   &:focus {
@@ -84,13 +85,8 @@
   }
 
   &:invalid {
-    border-color: red;
-
-    &::placeholder {
-      color: red;
-
-      opacity: 1;
-    }
+    background-color: #f6dada;
+    border-color: #f6dada;
   }
 }
 

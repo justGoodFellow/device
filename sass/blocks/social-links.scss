@@ -10,6 +10,17 @@
 
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 
   &--fb {
     background-image: url('../img/fb.svg');

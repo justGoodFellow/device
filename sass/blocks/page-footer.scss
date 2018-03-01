@@ -47,6 +47,27 @@
   }
 
   .user-menu__link {
+    color: rgba(white, 0.7);
+
+    &:hover,
+    &:focus {
+      color: white;
+
+      opacity: 1;
+
+      &::before {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
     &--login {
       &::before {
         background-image: url('../img/user--yellow.svg');
@@ -93,6 +114,19 @@
 }
 
 .page-footer__credit {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    display: block;
+  }
+
   span {
     @include visually-hidden;
   }

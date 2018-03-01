@@ -43,15 +43,16 @@
   color: rgba(black, 0.3);
   text-decoration: none;
 
-  &--index {
-    width: 14px;
-    height: 12px;
+  &[href] {
+    &:hover,
+    &:focus {
+      color: rgba(black, 0.6);
 
-    background-image: url('../img/icon-home.svg');
-    background-repeat: no-repeat;
+      outline: none;
+    }
 
-    span {
-      @include visually-hidden;
+    &:active {
+      color: rgba(black, 0.1);
     }
   }
 }

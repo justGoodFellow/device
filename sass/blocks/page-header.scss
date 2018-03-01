@@ -83,7 +83,12 @@
     color: white;
 
     background-color: black;
+    outline: none;
     visibility: visible;
+  }
+
+  &:active {
+    color: rgba(white, 0.3);
   }
 }
 

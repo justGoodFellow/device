@@ -52,8 +52,20 @@
 
 .product__compare {
   font-size: 13px;
-  color: rgba(black, 0.5);
+  color: black;
   text-decoration: none;
+
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 .product__info {

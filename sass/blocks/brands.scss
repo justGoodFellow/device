@@ -31,4 +31,14 @@
     opacity: 0.2;
     filter: grayscale(1);
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    img {
+      opacity: 1;
+      filter: none;
+    }
+  }
 }

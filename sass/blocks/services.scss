@@ -47,7 +47,10 @@
 
     color: $color-main;
 
-    background-color: black;
+    &::after {
+      background-color: black;
+      transform: scale(1, 5);
+    }
   }
 }
 

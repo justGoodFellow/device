@@ -1,10 +1,13 @@
 .btn {
+  position: relative;
+
   display: inline-flex;
   justify-content: center;
-  padding: 0;
+  padding: 0 15px;
 
   font-weight: 800;
   font-size: 18px;
+  line-height: 40px;
   font-family: $font-second;
   color: black;
   text-transform: uppercase;
@@ -12,7 +15,39 @@
   letter-spacing: 0.2em;
 
   background: none;
-  background-color: $color-main--dark;
   border: none;
   cursor: pointer;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 8px;
+    margin-top: -4px;
+
+    background-color: $color-main--dark;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scale(1, 5);
+
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &:active {
+    color: rgba(black, 0.3);
+  }
 }

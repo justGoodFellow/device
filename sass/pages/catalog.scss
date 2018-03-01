@@ -123,26 +123,28 @@
   font: inherit;
   font-weight: 400;
   font-size: 14px;
-  color: rgba(black, 0.3);
+  color: black;
 
   background-color: transparent;
   border: none;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: black;
-
-    outline: none;
-  }
 
   span {
     @include visually-hidden;
   }
 
-  &:disabled {
-    cursor: auto;
-    opacity: 1;
+  &:enabled {
+    cursor: pointer;
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 
   &--arrow {
@@ -155,11 +157,18 @@
     border-style: solid;
     border-color: transparent;
     border-top-color: black;
-    opacity: 0.3;
 
-    &:hover,
-    &:focus {
-      opacity: 1;
+    &:enabled {
+      opacity: 0.2;
+
+      &:hover,
+      &:focus {
+        opacity: 0.4;
+      }
+
+      &:active {
+        opacity: 1;
+      }
     }
 
     &:disabled {
