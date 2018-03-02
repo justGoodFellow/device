@@ -4,6 +4,18 @@
   padding: 0;
 
   list-style: none;
+
+  &--out {
+    display: none;
+  }
+
+  &:hover {
+    .main-nav__list {
+      &--out {
+        display: flex;
+      }
+    }
+  }
 }
 
 .main-nav__item {

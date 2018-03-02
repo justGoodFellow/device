@@ -1,8 +1,10 @@
 .btn {
   position: relative;
+  z-index: 1;
 
   display: inline-flex;
   justify-content: center;
+  min-width: 200px;
   padding: 0 15px;
 
   font-weight: 800;
@@ -17,7 +19,6 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1;
 
   &::after {
     content: '';

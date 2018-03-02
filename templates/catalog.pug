@@ -27,13 +27,13 @@ block content
                 a.user-menu__link.user-menu__link--cart(href='#')
                   | Корзина
         nav.page-header__main-nav.main-nav
-          .page-header__row
+          .page-header__row.page-header__row--second
             .page-header__col.page-header__col--left
               ul.main-nav__list
                 li.main-nav__item
                   a.main-nav__link.main-nav__link--catalog(href='#')
                     | Каталог товаров
-                  ul.main-nav__list
+                  ul.main-nav__list.main-nav__list--out
                     li
                       ul.main-nav__list.main-nav__list--lvl2
                         li
@@ -171,6 +171,7 @@ block content
                 li.catalog__sort-item
                   button.catalog__sort-btn(type='button')
                     | По популярности
+              ul.catalog__sort-items.catalog__sort-items--arrows
                 li.catalog__sort-item
                   button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--up(type='button')
                     span

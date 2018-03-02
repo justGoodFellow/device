@@ -3,6 +3,7 @@
 
   display: flex;
   justify-content: space-between;
+  padding-bottom: 80px;
 }
 
 .info__company,
@@ -32,6 +33,8 @@
 }
 
 .info__description {
+  margin: 30px 0;
+
   line-height: 30px;
   color: $gray--darken;
 }
@@ -40,19 +43,23 @@
   @include list-reset;
 
   flex-direction: column;
+  margin-top: 65px;
+  margin-bottom: 55px;
 }
 
 .info__item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin: 10px 0;
 
   font-weight: 800;
   font-size: 16px;
+  line-height: 20px;
   font-family: $font-second;
 
   &::before {
     content: '';
+    display: block;
 
     width: 4px;
     height: 4px;
@@ -61,10 +68,6 @@
     border: 2px solid $gray--light;
     border-radius: 50%;
   }
-}
-
-.info__company-more {
-  margin-top: 100px;
 }
 
 .info__contacts-map {
@@ -78,4 +81,12 @@
 
     background-color: $gray--lightest;
   }
+}
+
+.info__btn {
+  min-width: 260px;
+}
+
+.info__feedback-open {
+  margin-top: 25px;
 }

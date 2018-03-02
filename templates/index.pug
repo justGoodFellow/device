@@ -1,7 +1,7 @@
 extend ./layouts/base.pug
 
 block content
-  header.page-header
+  header.page-header.page-header--hidden-menu
     .page-header__wrapper
       .page-header__inner
         a.page-header__logo.logo
@@ -30,7 +30,7 @@ block content
                 li.main-nav__item
                   a.main-nav__link.main-nav__link--catalog(href='#')
                     | Каталог товаров
-                  ul.main-nav__list
+                  ul.main-nav__list.main-nav__list--out
                     li
                       ul.main-nav__list.main-nav__list--lvl2
                         li
@@ -225,7 +225,7 @@ block content
               | Автотрейдинг
             li.info__item
               | ЖелДорЭкспедиция
-          a.info__company-more.btn(href='#')
+          a.info__company-more.info__btn.btn(href='#')
             | Подробнее о нас
         section.info__contacts
           h2.info__title
@@ -234,7 +234,7 @@ block content
             | Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
           a.info__contacts-map(href='#')
             img(src='img/map.jpg', width='560', height='222', alt='г. Москва, ул. Строителей, д. 15')
-          a.info__feedback-open.btn.btn--fluid(href='#')
+          a.info__feedback-open.info__btn.btn(href='#')
             | Напишите нам
       .info__modal-map.map
         .map__container
@@ -258,8 +258,8 @@ block content
               label.feedback__label(for='text')
                 | Текст письма:
               textarea.feedback__field(id='text', name='text', placeholder='В свободной форме')
-            button.feedback__send.btn(type='submit')
-              | Отправить
+          button.feedback__send.btn(type='submit')
+            | Отправить
         button.feedback__close.modal__close(type='button')
           span
             | Закрыть
