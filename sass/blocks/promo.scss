@@ -57,7 +57,6 @@
   font-weight: 800;
   font-size: 47px;
   font-family: $font-second;
-  letter-spacing: 0.02em;
 
   &::before {
     @include line;

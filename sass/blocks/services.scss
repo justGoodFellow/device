@@ -47,7 +47,6 @@
   margin: 12px 0;
   padding-left: 20px;
 
-
   &:disabled {
     width: 100%;
 
@@ -109,13 +108,13 @@
 }
 
 .services__slide-title {
-  letter-spacing: 0.02em;
   margin: 0;
   margin-bottom: 30px;
 
   font-weight: 800;
   font-size: 47px;
   font-family: $font-second;
+  letter-spacing: 0.02em;
 }
 
 .services__slide-description {

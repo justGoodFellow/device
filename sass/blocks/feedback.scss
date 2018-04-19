@@ -1,13 +1,13 @@
 .feedback {
-  // top: 50%;
-  position: relative;
+  position: fixed;
+  top: 50%;
 
   display: none;
   box-sizing: border-box;
   width: 960px;
   min-height: 430px;
+  margin-top: -215px;
   margin-left: -480px;
-  // margin-top: -215px;
   padding: 100px;
   padding-top: 85px;
   padding-bottom: 75px;

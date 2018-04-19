@@ -1,12 +1,13 @@
 @import 'normalize.scss';
 @import 'variables.scss';
 @import 'mixins.scss';
-
+@import 'animations.scss';
+// 
 @import 'global/fonts.scss';
 @import 'global/layout.scss';
-
+// 
 @import 'pages/catalog.scss';
-
+// 
 @import 'blocks/btn.scss';
 @import 'blocks/logo.scss';
 @import 'blocks/range-filter.scss';

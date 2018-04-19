@@ -28,7 +28,7 @@ block content
             .page-header__col.page-header__col--left
               ul.main-nav__list.main-nav__list--catalog
                 li.main-nav__item
-                  a.main-nav__link.main-nav__link--catalog(href='#')
+                  a.main-nav__link.main-nav__link--catalog(href='catalog.html')
                     | Каталог товаров
                   ul.main-nav__list.main-nav__list--out
                     li
@@ -50,10 +50,11 @@ block content
                         li
                           a.main-nav__link(href='#')
                             | Умные часы
-                    ul.main-nav__list.main-nav__list--lvl2
-                      li
-                        a.main-nav__link(href='#')
-                          | Квадрокоптеры
+                    li
+                      ul.main-nav__list.main-nav__list--lvl2
+                        li
+                          a.main-nav__link(href='#')
+                            | Квадрокоптеры
             .page-header__col.page-header__col--right
               ul.main-nav__list
                 li.main-nav__item
@@ -101,7 +102,9 @@ block content
               img(src='img/promo-slider-2.png', width='345', height='485', alt='')
             .slider-promo__content
               h2.slider-promo__title
-                | Худеем правильно!
+                | Худеем
+                br
+                | правильно!
               p.slider-promo__description
                 | Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
               a.slider-promo__link.btn(href='#')
@@ -238,6 +241,7 @@ block content
             | Напишите нам
       .info__modal-map.map
         .map__container
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779985!2d37.527429316262506!3d55.6870309805358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1524093138954', width='960', height='559', allowfullscreen='')
           img(src='img/map--big.jpg', width='960', height='559', alt='г. Москва, ул. Строителей, д. 15')
         button.map__close.modal__close(type='button')
           span
