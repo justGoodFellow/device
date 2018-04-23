@@ -22,6 +22,8 @@
 }
 
 .map__container {
+  position: relative;
+
   iframe {
     position: absolute;
     top: 0;

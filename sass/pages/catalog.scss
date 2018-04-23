@@ -23,6 +23,8 @@
 
 .catalog__left-side {
   flex-grow: 1;
+
+  background-color: #eeeeee; // for old safari
 }
 
 .catalog__right-side {
@@ -97,8 +99,8 @@
 
 .catalog__filters-title {
   margin: 0;
-  margin-bottom: 27px;
   padding-top: 14px;
+  padding-bottom: 27px;
 
   font-size: 17px;
   font-family: $font-second;
@@ -107,7 +109,7 @@
 }
 
 .catalog__filters-btn {
-  min-width: 140px;
+  display: block; // for old safari
 }
 
 .catalog__sort {

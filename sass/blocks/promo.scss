@@ -1,6 +1,5 @@
 .promo {
   position: relative;
-  // z-index: -1;
   top: -110px;
 }
 
@@ -92,6 +91,8 @@
   th {
     width: 160px;
     padding: 0;
+
+    text-align: left;
 
     &:nth-child(2) {
       width: 140px;
