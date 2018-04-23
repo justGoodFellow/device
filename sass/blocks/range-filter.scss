@@ -14,7 +14,7 @@
   height: 2px;
   margin-top: 10px;
 
-  background-color: #d7dcde;
+  background-color: #dbdbdb;
 }
 
 .range-filter__bar {
@@ -42,7 +42,7 @@
 }
 
 .range-filter__max-toggle {
-  left: 135px;
+  left: 120px;
 }
 
 .range-filter__price-controls {
@@ -52,6 +52,7 @@
 
   font-size: 14px;
   font-family: $font-second;
+  color: black;
   text-transform: lowercase;
 
   opacity: 0.2;
@@ -59,10 +60,11 @@
   input {
     box-sizing: border-box;
     width: 100%;
-    padding: 0;
+    padding: 0 5px;
 
     font: inherit;
-    text-align: center;
+    text-align: left;
+    color: inherit;
 
     background: none;
     border: none;
