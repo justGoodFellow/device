@@ -67,14 +67,18 @@ block content
                   a.main-nav__link(href='#')
                     | Контакты
   main
+    h1.visually-hidden
+      | Device
     .promo
       .promo__wrapper
+        h2.visually-hidden
+          | Лучшее
         .promo__slider.slider-promo
           .slider-promo__item.slider-promo__item--active
             .slider-promo__img-container
-              img(src='img/promo-slider-1.png', width='384', height='486', alt='')
+              img(src='img/promo-slider-1.png', width='384', height='486', alt='Палка для селфи')
             .slider-promo__content
-              h2.slider-promo__title
+              h3.slider-promo__title
                 | Делай селфи, как Бен Стиллер!
               p.slider-promo__description
                 | Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
@@ -99,10 +103,11 @@ block content
                 | 01
           .slider-promo__item
             .slider-promo__img-container
-              img(src='img/promo-slider-2.png', width='345', height='485', alt='')
+              img(src='img/promo-slider-2.png', width='345', height='485', alt='Фитнес-браслет')
             .slider-promo__content
-              h2.slider-promo__title
+              h3.slider-promo__title
                 | Худеем
+                |
                 br
                 | правильно!
               p.slider-promo__description
@@ -120,9 +125,9 @@ block content
                 | 02
           .slider-promo__item
             .slider-promo__img-container
-              img(src='img/promo-slider-3.png', width='526', height='334', alt='')
+              img(src='img/promo-slider-3.png', width='526', height='334', alt='Квадрокоптер')
             .slider-promo__content
-              h2.slider-promo__title
+              h3.slider-promo__title
                 | Порхает как бабочка, жалит как пчела!
               p.slider-promo__description
                 | Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
@@ -153,6 +158,8 @@ block content
                 | 3
     section.popular
       .popular__wrapper
+        h2.visually-hidden
+          | Популярное
         ul.popular__items
           li.popular__item
             a.popular__link.popular__link--vr(href='#')
@@ -174,6 +181,8 @@ block content
               | Квадрокоптеры
     section.services
       .services__wrapper
+        h2.visually-hidden
+          | Услуги
         .services__slider
           .services__controls
             button.services__control-btn.btn(type='button', disabled)
@@ -203,15 +212,17 @@ block content
                   | Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
     section.brands
       .brands__wrapper
+        h2.visually-hidden
+          | Фирмы
         .brand__items
           a.brand__item(href='#', target='_blank')
-            img(src='img/logo-brand-1.png', width='260', height='100', alt='')
+            img(src='img/logo-brand-1.png', width='260', height='100', alt='DJI')
           a.brand__item(href='#', target='_blank')
-            img(src='img/logo-brand-2.png', width='260', height='100', alt='')
+            img(src='img/logo-brand-2.png', width='260', height='100', alt='SP Gadgets')
           a.brand__item(href='#', target='_blank')
-            img(src='img/logo-brand-3.png', width='260', height='100', alt='')
+            img(src='img/logo-brand-3.png', width='260', height='100', alt='GoPro')
           a.brand__item(href='#', target='_blank')
-            img(src='img/logo-brand-4.png', width='260', height='100', alt='')
+            img(src='img/logo-brand-4.png', width='260', height='100', alt='Vive')
     .info
       .info__wrapper
         section.info__company

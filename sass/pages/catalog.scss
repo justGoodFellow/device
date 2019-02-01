@@ -93,15 +93,13 @@
   border: none;
 }
 
-.catalog__form legend {
-  width: 100%;
-}
-
 .catalog__filters-title {
+  width: 100%;
   margin: 0;
   padding-top: 14px;
   padding-bottom: 27px;
 
+  font-weight: 800;
   font-size: 17px;
   font-family: $font-second;
 
