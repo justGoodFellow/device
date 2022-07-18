@@ -9,7 +9,7 @@ block content
         .page-header__row
           .page-header__col.page-header__col--left
             form.search
-              input.search__field(type='search', placeholder='Поиск по сайту')
+              input.search__field(type='search' placeholder='Поиск по сайту')
               button.search__submit(type='submit')
                 | Найти
           .page-header__col.page-header__col--right
@@ -93,7 +93,7 @@ block content
             .catalog__left-col
               h2.catalog__filter-type
                 | Фильтр:
-          form.catalog__form(action='#', method='get')
+          form.catalog__form(action='#' method='get')
             .catalog__left-col
               fieldset.catalog__filters-group
                 legend.catalog__filters-title
@@ -108,33 +108,33 @@ block content
                     .range-filter__price.range-filter__min-price
                       label(for='from')
                         | От
-                      input(id='from', type='text', value='0')
+                      input(id='from' type='text' value='0')
                     .range-filter__price.range-filter__max-price
                       label(for='to')
                         | До
-                      input(id='to', type='text', value='5000')
+                      input(id='to' type='text' value='5000')
               fieldset.catalog__filters-group
                 legend.catalog__filters-title
                   | Цвет
                 div
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='black', checked)
+                    input.checkbox__input(id='black' type='checkbox' checked)
                     label.checkbox__label(for='black')
                       | Черный
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='white')
+                    input.checkbox__input(id='white' type='checkbox')
                     label.checkbox__label(for='white')
                       | Белый
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='blue', checked)
+                    input.checkbox__input(id='blue' type='checkbox' checked)
                     label.checkbox__label(for='blue')
                       | Синий
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='red', checked)
+                    input.checkbox__input(id='red' type='checkbox' checked)
                     label.checkbox__label(for='red')
                       | Красный
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='pink')
+                    input.checkbox__input(id='pink' type='checkbox')
                     label.checkbox__label(for='pink')
                       | Розовый
               fieldset.catalog__filters-group
@@ -142,12 +142,21 @@ block content
                   | Bluetooth
                 div
                   .radiobox
-                    input.radiobox__input(type='radio', id='bluetooth-yes', name='bluetooth', checked)
+                    input.radiobox__input(
+                      id='bluetooth-yes'
+                      type='radio'
+                      name='bluetooth'
+                      checked
+                    )
                     label.radiobox__label(for='bluetooth-yes')
                       span
                         | Есть
                   .radiobox
-                    input.radiobox__input(type='radio', id='bluetooth-no', name='bluetooth')
+                    input.radiobox__input(
+                      id='bluetooth-no'
+                      type='radio'
+                      name='bluetooth'
+                    )
                     label.radiobox__label(for='bluetooth-no')
                       span
                         | Нет
@@ -161,7 +170,7 @@ block content
                 | Сортировка:
               ul.catalog__sort-items
                 li.catalog__sort-item
-                  button.catalog__sort-btn(type='button', disabled)
+                  button.catalog__sort-btn(type='button' disabled)
                     | По цене
                 li.catalog__sort-item
                   button.catalog__sort-btn(type='button')
@@ -175,7 +184,7 @@ block content
                     span
                       | Обратный порядок
                 li.catalog__sort-item.catalog__sort-item--active
-                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(type='button', disabled)
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(type='button' disabled)
                     span
                       | Прямой порядок
         .catalog__content-wrap
@@ -187,7 +196,11 @@ block content
                 .catalog__item.product
                   .product__container
                     .product__img-wrap
-                      img(src='img/product-1.jpg', width='360', height='380', alt='Любительская селфи-палка')
+                      img(
+                        src='img/product-1.jpg'
+                        width='360' height='380'
+                        alt='Любительская селфи-палка'
+                      )
                     .product__actions
                       a.product__buy.btn(href='#')
                         | В корзину
@@ -202,7 +215,11 @@ block content
                 .catalog__item.product
                   .product__container
                     .product__img-wrap
-                      img(src='img/product-2.jpg', width='360', height='380', alt='Профессиональная селфи-палка')
+                      img(
+                        src='img/product-2.jpg'
+                        width='360' height='380'
+                        alt='Профессиональная селфи-палка'
+                      )
                     .product__actions
                       a.product__buy.btn(href='#')
                         | В корзину
@@ -217,7 +234,11 @@ block content
                 .catalog__item.product
                   .product__container
                     .product__img-wrap
-                      img(src='img/product-3.jpg', width='360', height='380', alt='Непотопляемая селфи-палка')
+                      img(
+                        src='img/product-3.jpg'
+                        width='360' height='380'
+                        alt='Непотопляемая селфи-палка'
+                      )
                     .product__actions
                       a.product__buy.btn(href='#')
                         | В корзину
@@ -235,7 +256,11 @@ block content
                       span
                         | New
                     .product__img-wrap
-                      img(src='img/product-4.jpg', width='360', height='380', alt='Селфи-палка «Следуй за мной»')
+                      img(
+                        src='img/product-4.jpg'
+                        width='360' height='380'
+                        alt='Селфи-палка «Следуй за мной»'
+                      )
                     .product__actions
                       a.product__buy.btn(href='#')
                         | В корзину
@@ -247,21 +272,8 @@ block content
                         | Селфи-палка «Следуй за мной»
                     span.product__price
                       | 4900 руб.
-              .catalog__nav.catalog-nav
-                button.catalog-nav__prev.catalog-nav__btn(type='button')
-                  | Назад
-                ul.catalog-nav__items
-                  li.catalog-nav__item
-                    button.catalog-nav__btn(type='button', disabled)
-                      | 1
-                  li.catalog-nav__item
-                    button.catalog-nav__btn(type='button')
-                      | 2
-                  li.catalog-nav__item
-                    button.catalog-nav__btn(type='button')
-                      | 3
-                button.catalog-nav__next.catalog-nav__btn(type='button')
-                  | Вперед
+              include ../components/catalog-nav.pug
+
   footer.page-footer
     .page-footer__wrapper
       .page-footer__row
@@ -309,20 +321,20 @@ block content
         .page-footer__col-center
           ul.social-links
             li.social-links__item
-              a.social-links__link.social-links__link--fb(href='#', target='_blank')
+              a.social-links__link.social-links__link--fb(href='#' target='_blank')
                 span
                   | Мы в Фейсбуке
             li.social-links__item
-              a.social-links__link.social-links__link--in(href='#', target='_blank')
+              a.social-links__link.social-links__link--in(href='#' target='_blank')
                 span
                   |  Мы в Инстаграмме
             li.social-links__item
-              a.social-links__link.social-links__link--tw(href='#', target='_blank')
+              a.social-links__link.social-links__link--tw(href='#' target='_blank')
                 span
                   | Мы в Твиттере
         .page-footer__col-right
-          a.page-footer__credit(href='https://htmlacademy.ru/intensive/htmlcss', target='_blank')
+          a.page-footer__credit(href='https://htmlacademy.ru/intensive/htmlcss' target='_blank')
             span
               | Разработано — htmlacademy.ru
-            svg(width='27', height='35')
+            svg(width='27' height='35')
               use(xlink:href='img/symbols.svg#logo-html')
