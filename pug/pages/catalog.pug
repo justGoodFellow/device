@@ -116,48 +116,66 @@ block content
               fieldset.catalog__filters-group
                 legend.catalog__filters-title
                   | Цвет
-                div
-                  .checkbox
-                    input.checkbox__input(id='black' type='checkbox' checked)
-                    label.checkbox__label(for='black')
+                .catalog__filters-inner
+                  .inputbox.inputbox--check
+                    input.inputbox__input(
+                      id='black'
+                      type='checkbox'
+                      checked
+                    )
+                    label.inputbox__label(for='black')
                       | Черный
-                  .checkbox
-                    input.checkbox__input(id='white' type='checkbox')
-                    label.checkbox__label(for='white')
+                  .inputbox.inputbox--check
+                    input.inputbox__input(
+                      id='white'
+                      type='checkbox'
+                    )
+                    label.inputbox__label(for='white')
                       | Белый
-                  .checkbox
-                    input.checkbox__input(id='blue' type='checkbox' checked)
-                    label.checkbox__label(for='blue')
+                  .inputbox.inputbox--check
+                    input.inputbox__input(
+                      id='blue'
+                      type='checkbox'
+                      checked
+                    )
+                    label.inputbox__label(for='blue')
                       | Синий
-                  .checkbox
-                    input.checkbox__input(id='red' type='checkbox' checked)
-                    label.checkbox__label(for='red')
+                  .inputbox.inputbox--check
+                    input.inputbox__input(
+                      id='red'
+                      type='checkbox'
+                      checked
+                    )
+                    label.inputbox__label(for='red')
                       | Красный
-                  .checkbox
-                    input.checkbox__input(id='pink' type='checkbox')
-                    label.checkbox__label(for='pink')
+                  .inputbox.inputbox--check
+                    input.inputbox__input(
+                      id='pink'
+                      type='checkbox'
+                    )
+                    label.inputbox__label(for='pink')
                       | Розовый
               fieldset.catalog__filters-group
                 legend.catalog__filters-title
                   | Bluetooth
-                div
-                  .radiobox
-                    input.radiobox__input(
+                .catalog__filters-inner
+                  .inputbox.inputbox--radio
+                    input.inputbox__input(
                       id='bluetooth-yes'
                       type='radio'
                       name='bluetooth'
                       checked
                     )
-                    label.radiobox__label(for='bluetooth-yes')
+                    label.inputbox__label(for='bluetooth-yes')
                       span
                         | Есть
-                  .radiobox
-                    input.radiobox__input(
+                  .inputbox.inputbox--radio
+                    input.inputbox__input(
                       id='bluetooth-no'
                       type='radio'
                       name='bluetooth'
                     )
-                    label.radiobox__label(for='bluetooth-no')
+                    label.inputbox__label(for='bluetooth-no')
                       span
                         | Нет
               button.catalog__filters-btn.btn(type='submit')

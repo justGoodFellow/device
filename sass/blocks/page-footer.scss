@@ -73,22 +73,16 @@
       }
     }
 
-    &--login {
-      &::before {
-        background-image: url('../img/user--yellow.svg');
-      }
+    &--login::before {
+      background-image: url('../img/user--yellow.svg');
     }
 
-    &--compare {
-      &::before {
-        background-image: url('../img/compare--yellow.svg');
-      }
+    &--compare::before {
+      background-image: url('../img/compare--yellow.svg');
     }
 
-    &--cart {
-      &::before {
-        background-image: url('../img/cart--yellow.svg');
-      }
+    &--cart::before {
+      background-image: url('../img/cart--yellow.svg');
     }
   }
 }
